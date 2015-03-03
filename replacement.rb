@@ -15,5 +15,5 @@ class Replacement
 
 end
 
-replace = Replacement.new
-replace.replace_all_vowel
+replacement = Replacement.new
+replacement.replace_all_vowel
