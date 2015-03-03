@@ -10,10 +10,10 @@ class LetterCounter
     puts counts
   end
 
+  private
   def get_letters_in_string(string)
     string.downcase.scan(/[a-z]/)
   end
-
 
 end
 
