@@ -6,9 +6,7 @@ class LetterCounter
     letters = get_letters_in_string(string)
 
     counts = Hash.new(0)
-    for letter in letters
-      counts[letter] += 1
-    end
+    letters.each { |letter| counts[letter] += 1 }
     puts counts
   end
 
