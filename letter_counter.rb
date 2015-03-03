@@ -1,0 +1,3 @@
+class LetterCounter
+
+end
