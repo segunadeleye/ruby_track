@@ -1,18 +1,18 @@
 class LetterCounter
 
-	def count_occurence_of_letters(string)
-		letters = get_letters_in_string(string)
+  def count_occurence_of_letters(string)
+    letters = get_letters_in_string(string)
 
-	  counts = Hash.new(0)
-	  for letter in letters
-	    counts[letter] += 1
-	  end
-	  puts counts
-	end
+    counts = Hash.new(0)
+    for letter in letters
+      counts[letter] += 1
+    end
+    puts counts
+  end
 
-	def get_letters_in_string(string)
-	  string.downcase.scan(/[a-z]/)
-	end
+  def get_letters_in_string(string)
+    string.downcase.scan(/[a-z]/)
+  end
 
 
 end
