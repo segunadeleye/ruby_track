@@ -1,5 +1,7 @@
 class LetterCounter
 
+  REGEX_PATTERN = /[a-z]/
+
   def count_occurence_of_letters(string)
     letters = get_letters_in_string(string)
 
@@ -11,8 +13,9 @@ class LetterCounter
   end
 
   private
+
   def get_letters_in_string(string)
-    string.downcase.scan(/[a-z]/)
+    string.downcase.scan(REGEX_PATTERN)
   end
 
 end
