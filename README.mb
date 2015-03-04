@@ -1,0 +1,12 @@
+ruby
+
+until <condition>
+  the loop runs when the condition is false
+  the loop stops when the condition is true
+
+while <condition>
+  the loop runs when the condition is true
+  the loop stops when the condition is false
+
+
+
