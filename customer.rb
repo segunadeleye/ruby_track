@@ -11,17 +11,22 @@ class Customer
   end
 
   def deposit(amount)
-    puts "Old balance: #{@balance}"
-    puts "Amount Deposited: #{amount}"
+    old_balance = @balance
     @balance += amount
-    puts "New balance: #{@balance}"
+    transaction_details(old_balance, @balance)
   end
 
   def withdraw(amount)
-    puts "Old balance: #{@balance}"
-    puts "Amount Withdrawn: #{amount}"
+    old_balance = @balance
     @balance -= amount
-    puts "New balance: #{@balance}"
+    transaction_details(old_balance, @balance)
+  end
+
+  protected
+
+  def transaction_details(old_balance, new_balance)
+    puts "Old balance: #{old_balance}"
+    puts "New balance: #{new_balance}"
   end
 
 end
@@ -32,11 +37,14 @@ puts cus.name, cus.balance, cus.account_no
 cus1 = Customer.new('Adeleye')
 puts cus1.name, cus1.balance, cus1.account_no
 
-cus1.deposit(1000)
+cus.deposit(1000)
 cus1.deposit(2000)
-
-puts cus
-puts cus1
 
 puts cus.balance
 puts cus1.balance
+
+cus.withdraw(100)
+cus1.withdraw(200)
+
+puts "#{cus.name} with account number #{cus.account_no} now has an account balance of #{cus.balance}"
+puts "#{cus1.name} with account number #{cus1.account_no} now has an account balance of #{cus1.balance}"
