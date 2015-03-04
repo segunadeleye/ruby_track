@@ -4,9 +4,9 @@ class Palindrome
     input = get_input
     unless input == "q" || input == "Q"
       if palindrome?(input)
-        puts "The word #{input} is a palindrome."
+        puts "The word '#{input}' is a palindrome."
       else
-        puts "The word #{input} is not a palindrome."
+        puts "The word '#{input}' is not a palindrome."
       end
     end
   end
