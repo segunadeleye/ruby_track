@@ -1,11 +1,9 @@
 class Array
 
   def power(x)
-    self.collect do |item|
-      item ** x
-    end
+    p self.collect! { |item| item ** x }
   end
 
 end
 
-puts [1, 2, 3, 4, 5, 6].power(3)
+[1, 2, 3, 4, 5, 6].power(3)
