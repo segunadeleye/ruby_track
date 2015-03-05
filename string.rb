@@ -1,10 +1,10 @@
 class String
 
   def to_s
-    self.swapcase
+    puts self.swapcase!
   end
 
 end
 
-puts "iT iS a gREAT dAY tODAY.".to_s
-puts "hello WORLD".to_s
+"iT iS a gREAT dAY tODAY.".to_s
+"hello WORLD".to_s
