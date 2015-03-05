@@ -6,7 +6,7 @@ class CaseInverter
   end
 
   def to_s
-    @string.swapcase
+    "#{@string} -> #{@string.swapcase}"
   end
 
   def invert(string)
