@@ -1,7 +1,7 @@
 class Array
 
   def power(x)
-    p self.collect! { |item| item ** x }
+    p collect { |item| item ** x }
   end
 
 end

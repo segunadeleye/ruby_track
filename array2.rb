@@ -2,7 +2,7 @@ class Array
 
   def sort_by_length
     hash = Hash.new()
-    self.each do |item|
+    each do |item|
       key = item.to_s.length
       if hash.has_key?(key)
         hash[key].push(item)

@@ -1,7 +1,7 @@
 class String
 
   def to_s
-    puts self.swapcase!
+    puts swapcase
   end
 
 end
