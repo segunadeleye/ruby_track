@@ -1,11 +1,8 @@
 class Factorial
   
-  def calculate(int)
-    numbers = Range.new(1, int)
-    factorial = numbers.inject do |result, n|
-      result * n
-    end
-    p factorial
+  def calculate(n)
+    factorial = (1..n).inject  { |product, n| product * n }
+    puts factorial
   end
 
 end
