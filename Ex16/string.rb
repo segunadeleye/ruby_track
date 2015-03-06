@@ -26,5 +26,5 @@ class String
 
 end
 
-a = String.new
-a.search
+string = String.new
+string.search
