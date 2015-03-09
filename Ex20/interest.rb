@@ -10,10 +10,9 @@ class Interest
     principal, time = get_input
     s_i = simple_interest(principal, time)
     c_i = compound_interest(principal, time)
-    difference = (c_i - s_i)
+    difference = @block.call(c_i, s_i)
     display(principal, time, c_i, s_i, difference)
   end
-
 
   private
   
@@ -49,5 +48,5 @@ class Interest
 
 end
 
-interest = Interest.new
+interest = Interest.new { |compound_interest, simple_interest| compound_interest - simple_interest }
 interest.difference
