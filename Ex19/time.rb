@@ -1,0 +1,38 @@
+class TIME
+
+  TIME_PATTERN = /^([0-2]?[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])/
+
+  def sum(*a)
+    total_seconds, total_minutes, total_hours = 0, 0, 0
+    a.each do |time|
+      match = TIME_PATTERN.match(time)
+      puts match
+      if match
+        seconds = Integer(match[3])
+        minutes = Integer(match[2])
+        hours = Integer(match[1])
+        total_seconds += seconds
+        total_minutes += minutes
+        total_hours += hours
+      else
+        return "#{time} is invalid"
+      end
+    end
+
+    total_minutes += total_seconds / 60
+    total_hours += total_minutes / 60
+    total_day = total_hours / 24
+    
+    seconds = total_seconds % 60
+    minutes =  total_minutes % 60
+    hours = total_hours % 24
+    day = ""
+    day = "#{total_day} day & " if total_day > 0
+
+    "#{day}#{hours}:#{0 if minutes < 10}#{minutes}:#{0 if seconds < 10}#{seconds}"
+  end
+
+end
+
+time = TIME.new
+time.sum("19:03:59", "23:03:59", "3:59:59", "23:59:59", "3:09:59", "3:59:59")
