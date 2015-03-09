@@ -8,9 +8,9 @@ class TIME
       match = TIME_PATTERN.match(time)
       puts match
       if match
-        seconds = Integer(match[3])
-        minutes = Integer(match[2])
-        hours = Integer(match[1])
+        seconds = match[3].to_i
+        minutes = match[2].to_i
+        hours = match[1].to_i
         total_seconds += seconds
         total_minutes += minutes
         total_hours += hours
