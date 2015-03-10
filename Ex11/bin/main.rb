@@ -1,9 +1,9 @@
 require "../lib/pascal_triangle"
 require "../lib/factorial"
 
-pascal = PascalTriangle.new
+pascal_triangle = PascalTriangle.new
 
-pascal.pascal(6) do |n, v|
-  pascal = n.factorial / (v.factorial * (n - v).factorial)
-  print pascal, " "
+pascal_triangle.pascal(6) do |n, v|
+  number = n.factorial / (v.factorial * (n - v).factorial)
+  print number, " "
 end
