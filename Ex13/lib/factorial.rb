@@ -5,10 +5,7 @@ class Factorial
     unless n == 0
       factorial = (1..n).inject  { |product, n| product * n }
     end
-    factorial
+    "#{n}! = #{factorial}"
   end
 
 end
-
-factorial = Factorial.new()
-factorial.calculate(9)

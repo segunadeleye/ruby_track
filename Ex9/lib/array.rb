@@ -1,6 +1,6 @@
 class Array
 
-  def sort_by_length
+  def group_by_length
     hash = Hash.new()
     each do |item|
       key = item.to_s.length
@@ -11,9 +11,7 @@ class Array
         hash[key].push(item)
       end
     end
-    puts hash
+    hash
   end
 
 end
-
-['abc', 'def', 1234, 234, 'abcd', 'x', 'mnop', 5, 'zZzZ'].sort_by_length

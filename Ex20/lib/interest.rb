@@ -6,8 +6,7 @@ class Interest
     @block = block
   end
 
-  def difference
-    principal, time = get_input
+  def difference(principal, time)
     s_i = simple_interest(principal, time)
     c_i = compound_interest(principal, time)
     difference = @block.call(c_i, s_i)
@@ -15,14 +14,6 @@ class Interest
   end
 
   private
-  
-  def get_input
-    print "Enter Pricipal Amount: "
-    principal = gets.to_f
-    print "Enter Number of Years: "
-    time = gets.to_f
-    principal, time = principal, time
-  end
 
   def simple_interest(principal, time)
     simple_interest = principal * time * INTEREST_RATE
@@ -47,6 +38,3 @@ class Interest
   end
 
 end
-
-interest = Interest.new { |compound_interest, simple_interest| compound_interest - simple_interest }
-interest.difference

@@ -1,6 +1,6 @@
-class TIME
+class Time
 
-  TIME_PATTERN = /^([0-2]?[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])/
+  TIME_PATTERN = /^([0-2]?[0-3]|[0-1]?[0-9]):([0-5][0-9]):([0-5][0-9])/
 
   def sum(*a)
     total_seconds, total_minutes, total_hours = 0, 0, 0
@@ -15,7 +15,7 @@ class TIME
         total_minutes += minutes
         total_hours += hours
       else
-        return "#{time} is invalid"
+        return "#{time} is not a valid 24-hour time value."
       end
     end
 
@@ -33,6 +33,3 @@ class TIME
   end
 
 end
-
-time = TIME.new
-time.sum("19:03:59", "23:03:59", "3:59:59", "23:59:59", "3:09:59", "3:59:59")
