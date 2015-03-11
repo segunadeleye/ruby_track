@@ -21,7 +21,7 @@ class Customer
   def withdraw(amount)
     if amount <= 0
       puts "Amount must be greater than 0."
-    if amount < @balance
+    elsif amount > @balance
       puts "You do not have sufficient funds."
     else
       old_balance = @balance
