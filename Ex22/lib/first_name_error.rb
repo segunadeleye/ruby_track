@@ -1,0 +1,2 @@
+class FirstNameError < StandardError
+end
