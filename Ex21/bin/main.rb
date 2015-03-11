@@ -1,7 +1,7 @@
 require "../lib/factorial"
 
 factorial = Factorial.new()
-factorial.calculate(0)
-factorial.calculate(1000)
-factorial.calculate(22)
-factorial.calculate(-2)
+puts factorial.calculate(0)
+puts factorial.calculate(10)
+puts factorial.calculate(22)
+puts factorial.calculate(-2)
