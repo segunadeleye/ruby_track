@@ -26,7 +26,7 @@ class Name
 
   def check
     raise EmptyFieldError, "There is an empty field." if empty?(@first_name) || empty?(@last_name)
-    raise FirstNameError, "First letter of your first name be capital." unless capitalized?(@first_name)
+    raise FirstNameError, "First letter of your first name must be capital." unless capitalized?(@first_name)
   end
 
 end
