@@ -33,10 +33,10 @@ class Customer
   protected
 
   def show_transaction_details(old_balance)
-    puts "Account Holder: #{@name}"
-    puts "Account Number: #{@account_no}"
-    puts "Old balance: #{old_balance}"
-    puts "New balance: #{@balance}"
+    puts "Account Holder: #{@name}",
+         "Account Number: #{@account_no}",
+         "Old balance: #{old_balance}",
+         "New balance: #{@balance}"
   end
 
 end
