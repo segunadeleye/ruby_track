@@ -21,11 +21,13 @@ class Employee
     end
   end
 
-  def show_details(details)
-    details.each do |designation, b|
-      puts "#{designation}#{"s" if details[designation].length > 1}"
-      b.each { |c| puts "#{c[0]} (EmpId: #{c[1]})" }
-      puts
+  def save_details(details)
+    File.open("../lib/employee.txt", "w") do |file|
+      details.each do |designation, value|
+        file.puts "#{designation}#{"s" if details[designation].length > 1}"
+        value.each { |detail| file.puts "#{detail[0]} (EmpId: #{detail[1]})" }
+        file.puts
+      end
     end
   end
 
@@ -34,7 +36,7 @@ class Employee
     details = extract_details(data)
     details = sort_details(details)
     grouped_details = group_details(details)
-    show_details(grouped_details)
+    save_details(grouped_details)
   end
 
 end
