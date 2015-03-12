@@ -1,13 +1,17 @@
 class String
 
-  LETTER_PATTERN = /[a-z]/
+  NON_LETTER_PATTERN = /[^a-z]/i
 
   def count_occurence_of_letters
     counts = Hash.new(0)
-    each_char do |character|
-      counts[character] += 1 if character =~ LETTER_PATTERN
+    remove_non_letters.each_char do |letter|
+      counts[letter] += 1
     end
     counts
+  end
+
+  def remove_non_letters
+    gsub(NON_LETTER_PATTERN, "")
   end
 
 end
