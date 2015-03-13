@@ -1,8 +1,8 @@
 class String
 
-  def check
+  def check_palindrome
     unless self == "q" || self == "Q"
-      if palindrome?(self)
+      if palindrome?
         "The word '#{self}' is a palindrome."
       else
         "The word '#{self}' is not a palindrome."
@@ -12,8 +12,8 @@ class String
 
   private
 
-  def palindrome?(input)
-    input == input.reverse
+  def palindrome?
+    self == reverse
   end
 
 end
