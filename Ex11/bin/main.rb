@@ -1,5 +1,5 @@
 require_relative "../lib/pascal_triangle"
-require_relative "../lib/factorial"
+require_relative "../lib/fixnum"
 
 pascal_triangle = PascalTriangle.new
 
