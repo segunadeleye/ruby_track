@@ -25,8 +25,9 @@ class Name
   end
 
   def validate
-    raise EmptyFieldError, "There is an empty field." if empty?(@first_name) || empty?(@last_name)
+    raise EmptyFieldError, "Make sure there are no empty field." if empty?(@first_name) || empty?(@last_name)
     raise FirstNameError, "First letter of your first name must be capital." unless capitalized?(@first_name)
+    puts "Valid input."
   end
 
 end
