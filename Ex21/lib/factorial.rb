@@ -10,7 +10,7 @@ class Factorial
     end
     "#{n}! = #{factorial}"
     rescue
-      "#{n} is an invalid number. You can't have a negative integer."
+      "#{n} is an invalid number. You can only have a positive integer."
   end
 
 end
