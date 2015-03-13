@@ -6,4 +6,4 @@ string = gets.chomp
 puts "Enter what to look for..."
 keyword = gets.chomp
 
-string.search(keyword)
+puts string.search(keyword)

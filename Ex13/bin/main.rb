@@ -1,4 +1,4 @@
 require_relative "../lib/factorial"
 
 factorial = Factorial.new()
-factorial.calculate(9)
+puts factorial.calculate(9)
