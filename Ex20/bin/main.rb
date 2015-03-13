@@ -1,4 +1,4 @@
-require "../lib/interest"
+require_relative "../lib/interest"
 
 print "Enter Pricipal Amount: "
 principal = gets.to_f

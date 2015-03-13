@@ -1,4 +1,4 @@
-require "../lib/string"
+require_relative "../lib/string"
 
 puts "Enter text to look through..."
 string = gets.chomp

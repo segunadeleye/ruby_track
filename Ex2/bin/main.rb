@@ -1,4 +1,4 @@
-require "../lib/string"
+require_relative "../lib/string"
 
 puts "Please enter text here: "
 input = gets.chomp

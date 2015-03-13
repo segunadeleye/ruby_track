@@ -1,4 +1,4 @@
-require "../lib/name"
+require_relative "../lib/name"
 
 puts "Enter your first name..."
 first_name = gets.chomp

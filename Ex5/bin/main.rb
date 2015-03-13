@@ -1,4 +1,4 @@
-require "../lib/customer"
+require_relative "../lib/customer"
 
 customer1 = Customer.new('Oluwasegun')
 customer2 = Customer.new('Adeleye')

@@ -1,4 +1,4 @@
-require "../lib/sum_time"
+require_relative "../lib/sum_time"
 
 time = SumTime.new
 
