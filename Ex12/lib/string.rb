@@ -14,10 +14,15 @@ class String
       else special_character_count += 1
       end
     end
+    display_count(lowercase_count, uppercase_count, digit_count, special_character_count)
+  end
 
-    puts "Number of lowercase characters: #{lowercase_count}",
-         "Number of uppercase characters: #{uppercase_count}",
-         "Number of digits: #{digit_count}",
-         "Number of special characters: #{special_character_count}"
+  def display_count(lowercase_count, uppercase_count, digit_count, special_character_count)
+    <<-eos
+    Number of lowercase characters: #{lowercase_count}
+    Number of uppercase characters: #{uppercase_count}
+    Number of digits: #{digit_count}
+    Number of special characters: #{special_character_count}
+    eos
   end
 end
