@@ -1,8 +1,8 @@
 class PascalTriangle
 
-  def pascal(x)
-    (0..x).each do |n|
-      (0..n).each { |v| yield n, v }
+  def draw(max)
+    (0..max).each do |row|
+      (0..row).each { |number| yield row, number }
     end
   end
 

@@ -3,7 +3,7 @@ require_relative "../lib/fixnum"
 
 pascal_triangle = PascalTriangle.new
 
-pascal_triangle.pascal(6) do |n, v|
-  number = n.factorial / (v.factorial * (n - v).factorial)
-  print number, " "
+pascal_triangle.draw(6) do |row, number|
+  pascal_number = row.factorial / (number.factorial * (row - number).factorial)
+  print pascal_number, " "
 end
