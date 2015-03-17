@@ -10,9 +10,9 @@ class String
     end
 
     if occurrence > 0
-      result = "#{self} | Total occurrences found: #{occurrence}"
+      "#{self} | Total occurrences found: #{occurrence}"
     else
-      result = "#{keyword} not found in the text."
+      "#{keyword} not found in the text."
     end
   end
 
