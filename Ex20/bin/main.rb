@@ -5,5 +5,8 @@ principal = gets.to_f
 print "Enter Number of Years: "
 time = gets.to_f
 
-interest = Interest.new { |compound_interest, simple_interest| compound_interest - simple_interest }
-interest.difference(principal, time)
+interest = Interest.new do |interest|
+  interest.principal = principal
+  interest.time = time
+end
+puts "The difference between the compound interest and the simple interest is #{interest.difference}."
