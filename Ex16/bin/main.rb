@@ -6,4 +6,5 @@ string = gets.chomp
 puts "Enter what to look for..."
 keyword = gets.chomp
 
-puts string.search(keyword)
+string, occurrence = string.search(keyword)
+puts "#{string} | Total occurrences found: #{occurrence}"
