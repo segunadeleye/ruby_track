@@ -5,24 +5,16 @@ class String
   DIGIT = "0".."9"
 
   def count_characters
-    lowercase_count = uppercase_count = digit_count = special_character_count = 0
+    count = Hash.new(0)
     each_char do |character|
       case character
-      when LOWERCASE then lowercase_count += 1
-      when UPPERCASE then uppercase_count += 1
-      when DIGIT then digit_count += 1
-      else special_character_count += 1
+      when LOWERCASE then count[:lowercase] += 1
+      when UPPERCASE then count[:uppercase] += 1
+      when DIGIT then count[:digit] += 1
+      else count[:special_character] += 1
       end
     end
-    display_count(lowercase_count, uppercase_count, digit_count, special_character_count)
+    count
   end
 
-  def display_count(lowercase_count, uppercase_count, digit_count, special_character_count)
-    <<-eos
-    Number of lowercase characters: #{lowercase_count}
-    Number of uppercase characters: #{uppercase_count}
-    Number of digits: #{digit_count}
-    Number of special characters: #{special_character_count}
-    eos
-  end
 end
