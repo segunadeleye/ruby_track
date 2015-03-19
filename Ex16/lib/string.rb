@@ -10,7 +10,7 @@ class String
     end
 
     if occurrence > 0
-      "#{self} | Total occurrences found: #{occurrence}"
+      return self, occurrence
     else
       "#{keyword} not found in the text."
     end
