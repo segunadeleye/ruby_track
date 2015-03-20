@@ -8,26 +8,13 @@ class Name
     @last_name = last_name
   end
 
-  def empty?(input)
-    empty = true
-    unless input.strip == ""
-      empty = false
-    end
-    empty
-  end
-
   def capitalized?(input)
-    capitalized = true
-    unless input.capitalize == input
-      capitalized = false
-    end
-    capitalized
+    input.capitalize == input ? true : false
   end
 
   def validate
-    raise EmptyFieldError, "Make sure there are no empty field." if empty?(@first_name) || empty?(@last_name)
+    raise EmptyFieldError, "Make sure there are no empty field." if @first_name.empty? || @last_name.empty?
     raise FirstNameError, "First letter of your first name must be capital." unless capitalized?(@first_name)
-    puts "Valid input."
   end
 
 end
