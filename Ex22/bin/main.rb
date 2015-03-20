@@ -9,3 +9,4 @@ last_name = gets.chomp
 name = Name.new(first_name, last_name)
 
 name.validate
+puts "Valid input."
