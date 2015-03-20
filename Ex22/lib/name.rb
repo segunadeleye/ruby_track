@@ -9,7 +9,7 @@ class Name
   end
 
   def capitalized?(input)
-    input.capitalize == input ? true : false
+    input.capitalize == input
   end
 
   def validate
