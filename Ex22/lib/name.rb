@@ -7,6 +7,7 @@ class Name
     validate(first_name, last_name)
     @first_name = first_name
     @last_name = last_name
+    display
   end
 
   def capitalized?(input)
@@ -16,6 +17,10 @@ class Name
   def validate(first_name, last_name)
     raise EmptyFieldError, "Make sure there are no empty field." if first_name.empty? || last_name.empty?
     raise FirstNameError, "First letter of your first name must be capital." unless capitalized?(first_name)
+  end
+
+  def display
+    puts "Name: #{@first_name} #{@last_name}"
   end
 
 end
